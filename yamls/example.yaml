@@ -1,0 +1,25 @@
+---
+- &sample_rule
+  name: name of test
+  descrption: user description of stuff
+  number_test: 9999
+  string_test: This is a sentance
+  list_test:
+    - item1
+    - item2
+    - item3
+  array_test: ["item1", "item2", "item3"]
+- <<: *sample_rule
+  name: Sample 1
+- <<: *sample_rule
+  name: Filled out example
+  description: Showing full replacement of template
+  number_test: 100400
+  string_test: Better example of a string
+  list_test: 
+    - Will created this
+    - Will is lucky
+  array_test:
+    - Arrays work like lists in yaml
+    - See example
+
