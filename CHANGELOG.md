@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.6.0 (2023-06-10)
+
+<!-- Release notes generated using configuration in .github/release.yaml at main -->
+
+## What's Changed
+### Other Changes
+* feat: changelog type github by @wirewc in https://github.com/wirewc/terrayaml/pull/17
+
+
+**Full Changelog**: https://github.com/wirewc/terrayaml/compare/v0.5.0...v0.6.0
+
 ## [0.5.0](https://github.com/wirewc/terrayaml/compare/v0.4.0...v0.5.0) (2023-06-10)
 
 
