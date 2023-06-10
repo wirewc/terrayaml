@@ -11,10 +11,25 @@ permissions:
 
 
 jobs:
-  release-please:
+  tag-new-version:
+    permissions: write-all
     runs-on: ubuntu-latest
+    outputs:
+      release_created: ${{ steps.release-flag.outputs.release_created }}
     steps:
-      - uses: google-github-actions/release-please-action@v3
+      - name: Create Release Tag
+        id: tag
+        uses: google-github-actions/release-please-action@v3
         with:
-          release-type: node
-          package-name: release-please-action
+          command: manifest # use configs in release-please-config.json
+          release-type: simple
+      - id: release-flag
+        run: echo "release_created=${{ steps.tag.outputs.release_created || false }}" >> $GITHUB_OUTPUT
+
+  dummy-job:
+    runs-on: ubuntu-latest
+    needs: tag-new-version 
+    steps:
+      - name: Echo release
+        run: echo "release_created=${{ needs.tag-new-version.outputs.release_created }}" 
+      
