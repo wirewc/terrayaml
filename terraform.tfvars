@@ -1,2 +1,2 @@
-region      = "region1"
+region      = "region2"
 environment = "dev"
