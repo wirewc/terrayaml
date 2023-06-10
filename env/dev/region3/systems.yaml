@@ -1,0 +1,23 @@
+---
+systems:
+  - label: "k3scontroller1"
+    image  : "linode/arch"
+    group  : "Terraform"
+    region : "ca-east"
+    type   : "g6-standard-2"
+    private_ip       : true
+    tags             : ["buzzcrate"]
+  - label: "k3sworker0"
+    image  : "linode/arch"
+    group  : "Terraform"
+    region : "ca-east"
+    type   : "g6-standard-2"
+    private_ip       : true
+    tags             : ["buzzcrate"]
+  - label: "k3sworker1"
+    image  : "linode/arch"
+    group  : "Terraform"
+    region : "ca-east"
+    type   : "g6-standard-2"
+    private_ip       : true
+    tags             : ["buzzcrate"]
